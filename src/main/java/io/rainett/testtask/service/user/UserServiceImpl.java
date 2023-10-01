@@ -40,7 +40,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Page<UserDto> getUsersByBirthday(UserBirthdaySearchDto birthdayDto, Pageable pageable) {
-        return userRepository.findByBirthdayBetween(birthdayDto.getFrom(), birthdayDto.getTo(), pageable)
+        return userRepository.findByBirthdayBetween(birthdayDto.from(), birthdayDto.to(), pageable)
                 .map(userMapper::userToDto);
     }
 

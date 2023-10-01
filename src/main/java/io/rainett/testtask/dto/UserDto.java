@@ -31,7 +31,7 @@ public class UserDto {
     private LocalDate birthday;
     private String address;
 
-    @Pattern(regexp = "\\+\\d{1,3}-\\(\\d{3}\\)-\\d{3}-\\d{2}-\\d{2}", message = "Invalid phone number format")
+    @Pattern(regexp = "\\+\\d{1,3}-\\(\\d{3}\\)-\\d{3}-\\d{2}-\\d{2}", message = "Wrong phone number format")
     private String phoneNumber;
 
 }
