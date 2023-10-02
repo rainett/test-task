@@ -94,6 +94,7 @@ public class UserServiceImpl implements UserService {
         Map<String, Object> userFields = Arrays.stream(user.getClass().getDeclaredFields())
                 .collect(Collectors.toMap(Field::getName, f -> f));
         for (Field f : dtoFields) {
+            f.setAccessible(true);
             Object fieldValue = f.get(userDto);
             if (fieldValue == null) {
                 continue;
